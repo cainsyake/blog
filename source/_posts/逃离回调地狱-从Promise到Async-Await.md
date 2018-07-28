@@ -51,6 +51,7 @@ axios.get('http://localhost:8080/a').then(data => {
 })
 ```
 在then方法中只要**返回一个Promise对象**，then方法就会继续调用。如果在Promise链上发生了错误/异常，就会被最后面的**catch**捕获到。<br><br>
+
 ---
 ### Async和Await
 也许我们会想，做到这样就可以了吧？哈哈，飞速更新发展的前端技术让许多程序猿不得不感叹:别更新了，我都快学不动了。<br>
