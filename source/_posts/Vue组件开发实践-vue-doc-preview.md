@@ -17,7 +17,7 @@ tags:
 * Office：通过提供office文档的url给微软的Office Online实现在线预览。
 * Text：通过Pre标签实现普通文本的展示。
 
-原来code类的文档（如html、js等后缀的文档）是通过Text组件进行预览处理的，后来为了更好的展示该类文档，将文档内容包装为markdown格式并使用Markdown组件进行处理（通过在文档头部和末尾添加'```'，即可将普通文档包装成markdown的代码块）。同时为了让代码类文档实现代码高亮，又增加了一个Prop:language。
+原来code类的文档（如html、js等后缀的文档）是通过Text组件进行预览处理的，后来为了更好的展示该类文档，将文档内容包装为markdown格式并使用Markdown组件进行处理（通过在文档头部和末尾添加markdown的代码块标识，即可将普通文档包装成markdown的代码块）。同时为了让代码类文档实现代码高亮，又增加了一个Prop:language，用以表明代码的语言。
 
 Office组件的实现使用了iframe，在这里我遇到了一个坑：iframe的高度设置。当iframe的height设置为百分比值时，如果iframe的父容器或（父容器的父容器...）没有设置绝对的高度（如height: 1000px）时，iframe的高度设置是无效的。
 
